@@ -20,6 +20,7 @@ public class serviceImpl implements UserService {
     @Override
     public UserEntity getUserByID(Long id) {
        UserEntity user= userEntities.stream().filter(e->e.getUserId().equals(id)).findAny().orElse(null);
+
        return user;
     }
 }

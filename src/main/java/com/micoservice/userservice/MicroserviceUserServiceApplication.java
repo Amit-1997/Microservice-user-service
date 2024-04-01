@@ -17,6 +17,7 @@ public class MicroserviceUserServiceApplication {
 	}
 
 	@Bean
+	@LoadBalanced
 	public RestTemplate restTemplate()
 	{
 		return  new RestTemplate();

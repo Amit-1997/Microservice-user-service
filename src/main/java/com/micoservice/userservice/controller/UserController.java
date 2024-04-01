@@ -27,7 +27,8 @@ public class UserController {
     {
        UserEntity user= service.getUserByID(id);
        // http://localhost:9002/contact/user/1311
-        List<Contacts> contacts=restTemplate.getForObject("http://localhost:9002/contact/user/"+id, List.class);
+        //http://192.168.1.3:9001/user/1311
+        List<Contacts> contacts=restTemplate.getForObject("http://contact-service/contact/user/"+id, List.class);
         user.setContacts(contacts);
         return user;
     }
